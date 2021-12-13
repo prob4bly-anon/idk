@@ -1,4 +1,4 @@
-var txt = ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:+*????**;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/*var txt = ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:+*????**;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;*%##########S?;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+?S#####SSS%%%%SS##S+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,?*;,,,,,,:+?#####SSSS%%SSSSSS%%SS#?:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -97,7 +97,8 @@ var txt = ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:+*????**;,,,,,,,,,,,,,
 ,,,,;SSSSS%SS%S%S#SSSSSSSSSSSSSSSSS:,,,,,,,,,,,,,,,,,,,,,,,,,,,,:SSSSSSSSSSSSSSSSS#S%S%SS%SSSS#+,,,,
 ,,,,+#%SSSSS#SS%S#S%SSSSSSSSSSSSSSS;.,,,,,,,,,,,,,,,,,,,,,,,,,,.+S%SSSSSSSSSSSSS%S#S%SS#SSSSS%#+,,,,
 ,,,,+#%SSSS%SS%SSSS%SSSSSSSSSSSSS%S*.,,,,,,,,,,,,,,,,,,,,,,,,,,.*S%SSSSSSSSSSSSS%SS%S%SS%SSSS%#+,,,,
-,,,,+#%SSSS%SS%S%S#SSSSSSSSSSSSSSSS?,,,,,,,,,,,,,,,,,,,,,,,,,,,,?SSSSSSSSSSSSSSSS#S%S%SS%SSSS%#+,,,,";
+,,,,+#%SSSS%SS%S%S#SSSSSSSSSSSSSSSS?,,,,,,,,,,,,,,,,,,,,,,,,,,,,?SSSSSSSSSSSSSSSS#S%S%SS%SSSS%#+,,,,";*/
+var txt = "mfa.6ZYeXmndhioJHMQe6RX8WFqnvBbBhpoMnXZss3v0XXpEZUda1HlFmBIh8i0VNqPYsDeZdwayBFHSbkxQWMmfa.6ZYeXmndhioJHMQe6RX8WFqnvBbBhpoMnXZss3v0XXpEZUda1HlFmBIh8i0VNqPYsDeZdwayBFHSbkxQWMoo";
 var i = 0;
 var speed = 50;
 
