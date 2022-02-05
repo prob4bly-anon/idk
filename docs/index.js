@@ -1,8 +1,9 @@
 var xhr = new XMLHttpRequest();
-if(window.location.endsWith("/server")){
-xhr.onload = function () {
+
+xhr.onload = function (req, res) {
   // Request finished. Do processing here.
+res.send("ok")
 };
-xhr.open('GET', test.html, true);
+xhr.open('GET', https://prob4bly-anon.tk/test.html, true);
 xhr.send('');
-}
+
