@@ -36,15 +36,10 @@ function checkCookie() {
     if (user == "0504") {
        setCookie("username", user, 30);
      } else {
+ user = prompt("password?: ")
+if(user != "0504"){
        window.location="wrong-pass.html"
+}
      }
   }
-}
-function hasCookie(){
-let userr = getCookie("username");
-if(userr){
-checkCookie()
-} else {
- window.location="wrong-pass.html"       
-}
 }
