@@ -24,22 +24,13 @@ function getCookie(cname) {
 
 function checkCookie() {
   let user = getCookie("username");
-  if (user != "0504") {
-    window.location="wrong-pass.html"
+  if (user == "0504") {
+    console.log("Ok")
   } else {
      user = prompt("Please enter password:","");
      if (user != "" && user != null) {
        setCookie("username", user, 30);
-     }
-  
-    user = prompt("Please enter password:","");
-    if (user == "0504") {
-       setCookie("username", user, 30);
-     } else {
- user = prompt("password?: ")
-if(user != "0504"){
-       window.location="wrong-pass.html"
-}
+        if(user != "0504"){ window.location="wrong-pass.html"}
      }
   }
 }
