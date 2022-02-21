@@ -24,8 +24,8 @@ function getCookie(cname) {
 
 function checkCookie() {
   let user = getCookie("username");
-  if (user != "") {
-    window.location=""
+  if (user == "") {
+    window.location="wrong-pass.html"
   } else {
      user = prompt("Please enter password:","");
      if (user != "" && user != null) {
