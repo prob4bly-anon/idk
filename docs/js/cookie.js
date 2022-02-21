@@ -24,20 +24,27 @@ function getCookie(cname) {
 
 function checkCookie() {
   let user = getCookie("username");
-  if (user == "") {
+  if (user != "0504") {
     window.location="wrong-pass.html"
   } else {
      user = prompt("Please enter password:","");
      if (user != "" && user != null) {
        setCookie("username", user, 30);
      }
-  if(window.location==="ODg4NDQ3ODgyNzg.html"){
+  
     user = prompt("Please enter password:","");
     if (user == "0504") {
        setCookie("username", user, 30);
+     } else {
+       window.location="wrong-pass.html"
      }
-    }
   }
 }
+function hasCookie(){
+let userr = getCookie("username");
+if(userr){
 checkCookie()
-
+} else {
+ window.location="wrong-pass.html"       
+}
+}
