@@ -25,7 +25,7 @@ function getCookie(cname) {
 function checkCookie() {
   let user = getCookie("username");
   if (user != "") {
-    window.location="ODg4NDQ3ODgyNzg.html"
+    window.location=""
   } else {
      user = prompt("Please enter password:","");
      if (user != "" && user != null) {
@@ -33,7 +33,7 @@ function checkCookie() {
      }
   if(window.location==="ODg4NDQ3ODgyNzg.html"){
     user = prompt("Please enter password:","");
-    if (user != "" && user != null) {
+    if (user == "0504") {
        setCookie("username", user, 30);
      }
     }
