@@ -31,6 +31,7 @@ function checkCookie() {
      if (user != "" && user != null) {
        setCookie("username", user, 30);
         if(user != "0504" && user === "" && user===null){ window.location="wrong-pass.html"}
+        if(user=== "" && user === null){ window.location="wrong-pass.html"}
      }
   }
 }
