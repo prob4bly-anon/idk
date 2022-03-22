@@ -164,9 +164,22 @@ pre#smallest {font-size: 20%}
 ,,,,+#%SSSS%SS%S%S#SSSSSSSSSSSSSSSS?,,,,,,,,,,,,,,,,,,,,,,,,,,,,?SSSSSSSSSSSSSSSS#S%S%SS%SSSS%#+,,,,
   </pre>
 </span>       
-					<p>Hello, i'm Durgesh.</p>			
+					<TT id="txt">Hello, i'm Durgesh.</TT>			
 							</article>
-
+                                                <script>
+var i = 0;
+var txt = 'Hello, i'm Durgesh.';
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("txt").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, 50);
+  }
+} 
+setInterval(()=>{
+typeWriter();
+},19*50);
+                                                </script>
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
