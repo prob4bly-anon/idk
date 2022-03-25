@@ -498,7 +498,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
                         <script src="assets/js/vanilla-terminal.min.js"></script>
+<script src="assets/js/termly.js"> </script>
 <script> 
+var shell = new TermlyPrompt('#container')
 const commands = {
   flavour: (instance) => {
     instance.output('There is only one flavour for your favorite🍦and it is <b>vanilla<b>.')
