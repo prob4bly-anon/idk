@@ -47,7 +47,9 @@ button:hover, a:hover {
 
 
 <div class="card">
-  <pre>
+<div class="vanilla-terminal"> <p> vanilla-terminal-test </p></div> <br>
+<div id="container"> <p> termly-prompt-test: </p> </div>
+<!--  <pre>
   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:+*????**;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;*%##########S?;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+?S#####SSS%%%%SS##S+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -156,10 +158,30 @@ button:hover, a:hover {
     <a href="mailto:ds8295110@gmail.com"><i class="fa fa-email"></i></a> 
     <a href="#"><i class="fa fa-discord"></i></a>  
     <a href="https://instagram.com/prob4bly_anon"><i class="fa fa-instagram"></i></a>  
-    <a href="#"><i class="fa fa-whatsapp"></i></a> 
+    <a href="#"><i class="fa fa-whatsapp"></i></a> -->
   </div>
   <p><button>Contact</button></p>
 </div>
+<script src="assets/js/vanilla-terminal.min.js"></script>
+<script src="assets/js/termly-prompt.js"> </script>
+<script> 
+var shell = new TermlyPrompt('#container')
+const commands = {
+  flavour: (instance) => {
+    instance.output('There is only one flavour for your favorite🍦and it is <b>vanilla<b>.')
+    instance.setPrompt('@soyjavi <small>❤️</small> <u>vanilla</u> ');
+  },
+
+  ping: (instance, parameters) => {
+    instance.output('Ping to <u>${parameters[0]}</u>...');
+  },
+};
+
+const terminal = new VanillaTerminal({ commands });
+terminal.prompt('Type your name', (name) => {
+  terminal.output(`Hi ${name}!`);
+});
+</script>
 <script> 
 
 </script>
