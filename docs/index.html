@@ -46,6 +46,7 @@ pre#smallest {font-size: 20%}
 							<div class="inner">
 								<h1>Prob4bly-Anon</h1>
 								<p>idk.</p>
+<div class="vanilla-terminal"> </div>
 							</div>
 						</div>
 						<nav>
@@ -67,8 +68,9 @@ pre#smallest {font-size: 20%}
 								<h2 class="major">Intro</h2>
 <span class="image main"> 
 <!-- <img src="images/pic01.jpg" alt="prob4bly-anon" /> -->
-<div class="vanilla-terminal">
-  <!--<pre id="smallest">
+<div class="ascii">
+
+  <pre id="smallest">
   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:+*????**;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;*%##########S?;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+?S#####SSS%%%%SS##S+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -171,10 +173,10 @@ pre#smallest {font-size: 20%}
 ,,,,+#%SSSS%SS%S%S#SSSSSSSSSSSSSSSS?,,,,,,,,,,,,,,,,,,,,,,,,,,,,?SSSSSSSSSSSSSSSS#S%S%SS%SSSS%#+,,,,
   </pre>
 </span>       
-<p id="txt"> Hello, i'm Durgesh.</p>
+<p id="txt"> Hi, its Durgesh.</p>
 <p id="txt"> <bold></bold> <p>
 <p id="txt">  </p>
-<p id="test"> </p>-->			
+<p id="test"> </p>			
 							</article>
                                                 <!--<script>
 var i = 0;
@@ -494,7 +496,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-                        <script src="vanilla-terminal.min.js"></script>
+                        <script src="assets/js/vanilla-terminal.min.js"></script>
+<script> 
+const commands = {
+  flavour: (instance) => {
+    instance.output('There is only one flavour for your favorite🍦and it is <b>vanilla<b>.')
+    instance.setPrompt('@soyjavi <small>❤️</small> <u>vanilla</u> ');
+  },
+
+  ping: (instance, parameters) => {
+    instance.output('Ping to <u>${parameters[0]}</u>...');
+  },
+};
+
+const terminal = new VanillaTerminal({ commands });
+terminal.prompt('Type your name', (name) => {
+  terminal.output(`Hi ${name}!`);
+});
+</script>
 
 	</body>
 </html>
