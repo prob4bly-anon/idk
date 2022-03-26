@@ -174,7 +174,7 @@ pre#smallest {font-size: 20%}
   </pre>
 </span>       
 <p id="txt"> Hi, its Durgesh.</p>-->
-<div id="vanilla-terminal" style="text-transform:uppercase" > </div>
+<div id="vanilla-terminal" style="text-transform:none" > </div>
 <p id="txt"> <bold></bold> <p>
 <p id="txt">  </p>
 <p id="test"> </p>			
@@ -498,26 +498,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
                         <script src="assets/js/vanilla-terminal.min.js"></script>
-
-<script> 
-
-const commands = {
-  flavour: (instance) => {
-    instance.output('There is only one flavour for your favorite🍦and it is <b>vanilla<b>.')
-    instance.setPrompt('@soyjavi <small>❤️</small> <u>vanilla</u> ');
-  },
-
-  ping: (instance, parameters) => {
-    instance.output('Pinging <u>${parameters[0]}</u>...');
-  },
-
-};
-
-const terminal = new VanillaTerminal({ commands });
-terminal.prompt('Type your name', (name) => {
-  terminal.output(`Hi ${name}!`);
-});
-</script>
+                        <script src="assets/js/terminal.js"></script>
 
 	</body>
 </html>
