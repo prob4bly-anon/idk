@@ -173,8 +173,7 @@ pre#smallest {font-size: 20%}
 ,,,,+#%SSSS%SS%S%S#SSSSSSSSSSSSSSSS?,,,,,,,,,,,,,,,,,,,,,,,,,,,,?SSSSSSSSSSSSSSSS#S%S%SS%SSSS%#+,,,,
   </pre>-->
 </span>       
-<div id="vanilla-terminal">
-</div>
+<div id="vanilla-terminal"> </div>
 			
 							</article>
                                                 <!--<script>
@@ -510,7 +509,7 @@ const commands = {
   }
 };
 
-const terminal = new VanillaTerminal({ commands });
+const terminal = new VanillaTerminal({ commands, welcome:"Welcome to this web-based terminal.." });
 terminal.prompt('Type your name', (name) => {
   terminal.output(`Hi ${name}!`);
 });
