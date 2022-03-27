@@ -211,7 +211,7 @@ button:hover, a:hover {
   opacity: 0.7;
 }
 </style> 
-<div class="card">
+<div class="card" id="olgs">
   <img src="img.jpg" alt="User" style="width:100%">
   <h1>Durgesh (@Prob4ly_Anon)</h1>
   <p class="title">High school student, Programmer & Android enthusiast</p>
@@ -552,9 +552,14 @@ const commands = {
 }
     instance.output(`Pinging <u>${parameters[0]}</u>...`);
   },
+  
+  info: (instance) => {
+  const 
+}
 
 };
-
+const card = document.getElementById('olgs');
+card.display = block;
 const terminal = new VanillaTerminal({ commands });
 terminal.prompt('Type your name', (name) => {
   terminal.output(`Hi ${name}!`);
