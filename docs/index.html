@@ -554,12 +554,22 @@ const commands = {
   },
   
   info: (instance) => {
-  const 
+  const card1 = document.getElementById('olgs');
+  card1.style.display = none;
+  instance.output('
+<div class="card" id="olgs">
+  <img src="img.jpg" alt="User" style="width:100%">
+  <h1>Durgesh (@Prob4ly_Anon)</h1>
+  <p class="title">High school student, Programmer & Android enthusiast</p>
+  <p>"Programming is not a piece of cake."</p>
+  <p><button href="mailto:ds8295110@gmail.com">Contact</button></p>
+</div>
+');
 }
 
 };
 const card = document.getElementById('olgs');
-card.display = block;
+card.style.display = block;
 const terminal = new VanillaTerminal({ commands });
 terminal.prompt('Type your name', (name) => {
   terminal.output(`Hi ${name}!`);
