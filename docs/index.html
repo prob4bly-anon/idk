@@ -10,7 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -175,49 +174,7 @@ pre#smallest {font-size: 20%}
   </pre>
 </span>       
 <div id="vanilla-terminal"> 
-<style> 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-}
 
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-</style> 
-<div class="card" id="olgs">
-  <img src="img.jpg" alt="User" style="width:100%">
-  <h1>Durgesh (@Prob4ly_Anon)</h1>
-  <p class="title">High school student, Programmer & Android enthusiast</p>
-  <p>"Programming is not a piece of cake."</p>
-  <p><button href="mailto:ds8295110@gmail.com">Contact</button></p>
-</div>
 </div>
 			
 							</article>
@@ -551,25 +508,9 @@ const commands = {
   xhttp.send();
 }
     instance.output(`Pinging <u>${parameters[0]}</u>...`);
-  },
-  
-  info: (instance) => {
-  const card1 = document.getElementById('olgs');
-  card1.style.display = none;
-  instance.output('
-<div class="card" id="olgs">
-  <img src="img.jpg" alt="User" style="width:100%">
-  <h1>Durgesh (@Prob4ly_Anon)</h1>
-  <p class="title">High school student, Programmer & Android enthusiast</p>
-  <p>"Programming is not a piece of cake."</p>
-  <p><button href="mailto:ds8295110@gmail.com">Contact</button></p>
-</div>
-');
-}
-
+  }
 };
-const card = document.getElementById('olgs');
-card.style.display = block;
+
 const terminal = new VanillaTerminal({ commands });
 terminal.prompt('Type your name', (name) => {
   terminal.output(`Hi ${name}!`);
