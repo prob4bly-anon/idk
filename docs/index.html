@@ -513,8 +513,15 @@ const commands = {
 };
 
 const terminal = new VanillaTerminal({ commands, welcome:"Welcome to this web-based terminal" });
+
 terminal.prompt('Type your name', (name) => {
+localStorage.setItem("name", `${name}`);
+const userName = localStorage.getItem("name").value
+if(userName){
   terminal.output(`Hi ${name}!`);
+} else {
+terminal.prompt('Type your name', (name) => { terminal.output(`Hi ${name}!`) });
+}
 });</script>
 
 	</body>
