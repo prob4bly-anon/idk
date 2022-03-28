@@ -500,15 +500,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 const commands = {
   ping: (instance, parameters) => {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET",`${parameters[0]}`)
-    xhr.send("")
-    console.log(xhr.responseText)
+    xhr.open("GET",`${parameters[0]}`,true)
+    xhr.send();
+    alert(xhr.responseText)
     instance.output(`Pinging <u>${parameters[0]}</u>...`);
   },
 
 };
 
-const terminal = new VanillaTerminal({ commands });
+const terminal = new VanillaTerminal({ commands, welcome:"Welcome to this web-based terminal" });
 terminal.prompt('Type your name', (name) => {
   terminal.output(`Hi ${name}!`);
 });</script>
