@@ -1,6 +1,12 @@
 let xhr = new XMLHttpRequest(); //for the sake of simplicity..
 
-xhr.open('GET', '/article/xmlhttprequest/example/load');
+class Requests {
+  constructor() {
+    //ok
+  }
+}
+function get(url){
+xhr.open('GET', url);
 xhr.send();
 xhr.onload = function() {
   if (xhr.status != 200) { // analyze HTTP status of the response
@@ -22,7 +28,9 @@ xhr.onprogress = function(event) {
 xhr.onerror = function() {
   alert("Request failed");
 };
+}
 
+function post(){
 xhr.open("POST", url, true);
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 //xhr.setRequestHeader("Content-length", length);
@@ -34,3 +42,9 @@ xhr.onreadystatechange = function() {
 	}
 }
 xhr.send(params);
+};
+
+////////////////////
+
+const requests = new Requests();
+ 
