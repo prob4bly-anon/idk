@@ -28,6 +28,7 @@ form input[type="text"] {
   background: black;
   color: green;
 }
+.hiddenAudio { display: block;}
 
 pre {display: inline-block}
 pre#smallest {font-size: 20%}
@@ -68,9 +69,9 @@ pre#smallest {font-size: 20%}
 					<div id="main">
 
 						<!-- Intro -->
-							<article id="intro">
+							<article id="intro" onclick="playAudio()">
 								<h2 class="major">Intro</h2>
-<span class="image main"> 
+<span class="image main" onclick="stopAudio"> 
 <!-- <img src="images/pic01.jpg" alt="prob4bly-anon" /> -->
 <div class="ascii">
 
@@ -176,24 +177,23 @@ pre#smallest {font-size: 20%}
 ,,,,+#%SSSS%SS%SSSS%SSSSSSSSSSSSS%S*.,,,,,,,,,,,,,,,,,,,,,,,,,,.*S%SSSSSSSSSSSSS%SS%S%SS%SSSS%#+,,,,
 ,,,,+#%SSSS%SS%S%S#SSSSSSSSSSSSSSSS?,,,,,,,,,,,,,,,,,,,,,,,,,,,,?SSSSSSSSSSSSSSSS#S%S%SS%SSSS%#+,,,,
   </pre>
-</span>       
+</span>
+<audio class"hiddenAudio" id="audio" src="assets/bg-audio.mp3" Alt=".//hack G.U. "> </audio>       
 <p id="txt"> Hi, its Durgesh.</p>-->
 <div id="vanilla-terminal" autocapitalize="none" > </div>
 <p id="txt"> <bold></bold>			
 							</article>
-                                                <!--<script>
-var i = 0;
-var txt = "Hello, i'm Durgesh.";
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("txt").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, 50);
-  }
-} 
-
-typeWriter();
-                                   </script>-->
+                                                <script>
+function playAudio() {
+  var audio = document.getElementById("audio")
+  x.play(); 
+  x.loop ="loop";
+}
+function stopAudio() {
+  var audio = document.getElementById("audio")
+  x.stop();
+}
+                                   </script>
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
@@ -512,16 +512,10 @@ const commands = {
 
 };
 
-const terminal = new VanillaTerminal({ commands, welcome:"Welcome to this web-based terminal" });
+const terminal = new VanillaTerminal({ commands, welcome:"Welcome!" });
 
 terminal.prompt('Type your name', (name) => {
-localStorage.setItem("name", `${name}`);
-const userName = localStorage.getItem("name").value
-if(userName){
-  terminal.output(`Hi ${name}!`);
-} else {
-terminal.prompt('Type your name', (name) => { terminal.output(`Hi ${name}!`) });
-}
+terminal.output(`Hi ${name}!`);
 });</script>
 
 	</body>
