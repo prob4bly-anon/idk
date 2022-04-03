@@ -497,10 +497,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                         <script> 
 const commands = {
   ping: (instance, parameters) => {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET",`${parameters[0]}`,true)
-    xhr.send();
-    alert(xhr.responseText)
+    fetch(`${parameters[0]}`)
+    .then(response => 
+instance.output(`Status Code: ${response.statusCode}`)
+response.text()
+).then(data =>
+ alert(data)
+)
     instance.output(`Pinging <u>${parameters[0]}</u>...`);
   },
 
