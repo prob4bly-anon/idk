@@ -497,16 +497,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                         <script> 
 const commands = {
   ping: (instance, parameters) => {
-    fetch(`${parameters[0]}`)
-    .then(response => 
-instance.output(`Status Code: ${response.statusCode}`)
-response.text()
-).then(data =>
- alert(data)
-)
     instance.output(`Pinging <u>${parameters[0]}</u>...`);
   },
-
+  ls: (instance) => {
+instance.output(`   `)
+}
 };
 
 const terminal = new VanillaTerminal({ commands, welcome:"Welcome!" });
