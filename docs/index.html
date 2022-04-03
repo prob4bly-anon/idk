@@ -547,6 +547,17 @@ function playAudio(){
            audio.play();
            audio.volume = 0.1;
          }
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    return "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  return "latitude" + position.coords.latitude + "longitude" + position.coords.longitude;
+}
          const commands = {
          	ping: (instance, parameters) => {
          		instance.output(`Pinging 
@@ -554,7 +565,10 @@ function playAudio(){
          	},
          	ls: (instance) => {
          		instance.output(`   `)
-         	}
+         	},
+                whereami: (instance) => {
+                        instance.output(`${getLocation()}`)
+                }
          };
          const terminal = new VanillaTerminal({
          	commands,
