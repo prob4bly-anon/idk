@@ -545,6 +545,7 @@ function playAudio(){
            var audio = new Audio("https://github.com/prob4bly-anon/idk/blob/main/docs/assets/hack_gu_opening.mp3?raw=true");
            audio.loop = true;
            audio.play();
+           audio.volume = 0.1;
          }
          const commands = {
          	ping: (instance, parameters) => {
@@ -561,7 +562,7 @@ function playAudio(){
          });
          terminal.prompt('Type your name', (name) => {
          	terminal.output(`Hi ${name}!`);
-         terminal.output('\n \n \n \n \n \n \n \n \n \n \n')
+                terminal.output('\n \n \n \n \n \n \n \n \n \n \n')
          });
       </script>
    </body>
