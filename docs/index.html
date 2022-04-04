@@ -567,7 +567,7 @@ function showPosition(position) {
          		instance.output(`   `)
          	},
                 whereami: (instance) => {
-                        instance.output(`${getLocation()}`)
+                        setTimeout(instance.output(`${getLocation()}`),3000)
                 }
          };
          const terminal = new VanillaTerminal({
@@ -576,7 +576,7 @@ function showPosition(position) {
          });
          terminal.prompt('Type your name', (name) => {
          	terminal.output(`Hi ${name}!`);
-                terminal.output('\n \n \n \n \n \n \n \n \n \n \n')
+                terminal.output('. \n \n \n \n \n \n \n \n \n \n \n .')
          });
       </script>
    </body>
