@@ -568,7 +568,21 @@ function showPosition(position) {
          	},
                 whereami: (instance) => {
  instance.output(`Currently on earth.`)
-                }
+                },
+whoami: (instance) => {
+let userHasBeenSet = false;
+function randInt(min, max){ return Math.floor(Math.random() * (max - min)) + min;}
+ window.onload = function(){
+randomNumber = randInt(111,999)
+let isUserSet = localstorage.getItem("user")
+if(!isUserSet){
+localStorage.setItem("user", "u0_a"+randomNumber);
+userHasBeenSet = true;
+}else{
+instance.output(isUserSet)
+}
+}
+}
          };
          const terminal = new VanillaTerminal({
          	commands,
@@ -578,7 +592,12 @@ function showPosition(position) {
          	terminal.output(`Hi ${name}!`);
                 
          });
-function randInt(min, max){ return Math.floor(Math.random() * (max - min)) + min;}
-      </script>
+
+
+
+
+
+
+     </script>
    </body>
 </html>
