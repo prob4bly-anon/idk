@@ -575,7 +575,7 @@ function randInt(min, max){ return Math.floor(Math.random() * (max - min)) + min
  window.onload = function(){
 randomNumber = randInt(111,999)
 let isUserSet = localstorage.getItem("user")
-if(!isUserSet){
+if(isUserSet == null && isUserSet == ""){
 localStorage.setItem("user", "u0_a"+randomNumber);
 userHasBeenSet = true;
 }else{
