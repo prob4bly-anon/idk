@@ -567,8 +567,7 @@ function showPosition(position) {
          		instance.output(`   `)
          	},
                 whereami: (instance) => {
-const showLoc = getLocation();
- instance.output(`${showLoc}`)
+ instance.output(`Currently on earth.`)
                 }
          };
          const terminal = new VanillaTerminal({
@@ -577,8 +576,9 @@ const showLoc = getLocation();
          });
          terminal.prompt('Type your name', (name) => {
          	terminal.output(`Hi ${name}!`);
-                terminal.output('. \n \n \n \n \n \n \n \n \n \n \n .')
+                
          });
+function randInt(min, max){ return Math.floor(Math.random() * (max - min)) + min;}
       </script>
    </body>
 </html>
