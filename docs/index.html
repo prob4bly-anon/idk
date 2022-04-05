@@ -567,7 +567,8 @@ function showPosition(position) {
          		instance.output(`   `)
          	},
                 whereami: (instance) => {
-                        setTimeout(instance.output(`${getLocation()}`),3000)
+const showLoc = getLocation();
+ instance.output(`${showLoc}`)
                 }
          };
          const terminal = new VanillaTerminal({
